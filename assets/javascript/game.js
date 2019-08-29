@@ -14,16 +14,31 @@ document.onkeyup = function(event) {
     "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
     "t", "u", "v", "w", "x", "y", "z"];
 
-    if (options.indexOf(userGuess)) > -1) {
+    if (options.indexOf(userGuess) > -1) {
         var html = 
         "<h3>What letter am I thinking of?</h3>" +
         "<p>Wins: " + wins + "</p>" +
         "<p>Losses: " + losses + "</p>" +
         "<p>Remaining Guesses: " + guessesLeft + "</p>" +
-        "<p>Previous Guesses: " + pastGuesses + "</p>";
+        "<p>Previous Guesses: " + pastGuesses.join(", ") + "</p>";
 
         document.querySelector("#psychicGame").innerHTML = html;
 
-    }
+        if (userGuess.Guess === computerGuess) {
+            wins ++;
+            guessesLeft = 9;
+            pastGuesses = [];
+        }
 
-}
+        if (userGuess != computerGuess) {
+            guessesLeft --;
+            pastGuesses.push(userGuess);
+        }
+
+        if (guessesLeft === 0) {
+            losses ++;
+            guessesLeft = 9;
+            pastGuesses = [];
+        }
+    }
+};
