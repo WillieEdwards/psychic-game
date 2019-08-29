@@ -14,4 +14,16 @@ document.onkeyup = function(event) {
     "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
     "t", "u", "v", "w", "x", "y", "z"];
 
+    if (options.indexOf(userGuess)) > -1) {
+        var html = 
+        "<h3>What letter am I thinking of?</h3>" +
+        "<p>Wins: " + wins + "</p>" +
+        "<p>Losses: " + losses + "</p>" +
+        "<p>Remaining Guesses: " + guessesLeft + "</p>" +
+        "<p>Previous Guesses: " + pastGuesses + "</p>";
+
+        document.querySelector("#psychicGame").innerHTML = html;
+
+    }
+
 }
