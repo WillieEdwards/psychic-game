@@ -9,16 +9,18 @@ var pastGuesses = [];
 
 alert ("Look deep within the minds eye...")
 
+var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
 document.onkeyup = function(event) {
     var userGuess = event.key;
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    
     var options = ["a", "b", "c", "d", "e", "f", "g",
     "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
     "t", "u", "v", "w", "x", "y", "z"];
 
     if (options.indexOf(userGuess) > -1) {
 
-        if (userGuess.Guess === computerGuess) {
+        if (userGuess === computerGuess) {
             wins ++;
             guessesLeft = 9;
             pastGuesses = [];
@@ -30,8 +32,8 @@ document.onkeyup = function(event) {
         }
 
         if (guessesLeft === 0) {
-            losses ++;
             guessesLeft = 9;
+            losses ++;
             pastGuesses = [];
         }
 
