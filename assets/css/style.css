@@ -1,5 +1,5 @@
 body {
-    background: url("../images/seigaiha.png");
+    background: url("../images/ep_naturalblack.png");
     height: 100%;
   }
   
@@ -15,10 +15,10 @@ body {
   
   .container {
     border-radius: 7px;
-    background-color: #ffffff;
+    background-color:rgba(50, 50, 50, 0.4);
     padding: 2%;
     padding: 10px;
-    box-shadow: 4px 7px #dddddd;
+    box-shadow: 4px 7px #343a40;
   }
   
   h1,
@@ -29,7 +29,7 @@ body {
   }
   
   p {
-    color: #343a40;
+    color: #cccccc;
     margin-right: 3%;
   }
     
@@ -48,12 +48,18 @@ body {
     padding-bottom: 20px;
     font-size: 28px;
     line-height: 49px;
-    border-bottom: 3px solid #dddddd;
+    border-bottom: 3px solid #343a40;
   }
     
   h2,
   h3 {
     font-size: 22px;
+  }
+
+  /* psychic game */
+
+  .psychic-img {
+    border-radius: 4px;
   }
   
   /* navbar */

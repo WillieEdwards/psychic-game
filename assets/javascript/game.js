@@ -7,6 +7,8 @@ var losses = 0;
 var guessesLeft = 9;
 var pastGuesses = [];
 
+alert ("Look deep within the minds eye...")
+
 document.onkeyup = function(event) {
     var userGuess = event.key;
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
