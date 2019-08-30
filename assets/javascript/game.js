@@ -17,14 +17,6 @@ document.onkeyup = function(event) {
     "t", "u", "v", "w", "x", "y", "z"];
 
     if (options.indexOf(userGuess) > -1) {
-        var html = 
-        "<h3>What letter am I thinking of?</h3>" +
-        "<p>Wins: " + wins + "</p>" +
-        "<p>Losses: " + losses + "</p>" +
-        "<p>Remaining Guesses: " + guessesLeft + "</p>" +
-        "<p>Previous Guesses: " + pastGuesses.join(", ") + "</p>";
-
-        document.querySelector("#psychicGame").innerHTML = html;
 
         if (userGuess.Guess === computerGuess) {
             wins ++;
@@ -42,5 +34,14 @@ document.onkeyup = function(event) {
             guessesLeft = 9;
             pastGuesses = [];
         }
+
+        var html = 
+        "<h3>What letter am I thinking of?</h3>" +
+        "<p>Wins: " + wins + "</p>" +
+        "<p>Losses: " + losses + "</p>" +
+        "<p>Remaining Guesses: " + guessesLeft + "</p>" +
+        "<p>Previous Guesses: " + pastGuesses.join(", ") + "</p>";
+
+        document.querySelector("#psychicGame").innerHTML = html;
     }
 };
