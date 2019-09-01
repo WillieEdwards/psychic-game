@@ -7,11 +7,11 @@ var losses = 0;
 var guessesLeft = 9;
 var pastGuesses = [];
 
-alert ("Look deep within the minds eye...")
-
-var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+alert ("Look deep within the minds eye, and you will find the answer in which you seek...")
 
 document.onkeyup = function(event) {
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
     var userGuess = event.key;
     
     var options = ["a", "b", "c", "d", "e", "f", "g",
@@ -24,6 +24,7 @@ document.onkeyup = function(event) {
             wins ++;
             guessesLeft = 9;
             pastGuesses = [];
+            alert ("You've chosen correctly...")
         }
 
         if (userGuess != computerGuess) {
@@ -35,6 +36,7 @@ document.onkeyup = function(event) {
             guessesLeft = 9;
             losses ++;
             pastGuesses = [];
+            alert ("Don't try to comprehend with your mind. Your mind's very limited. Use your intuition.")
         }
 
         var html = 
