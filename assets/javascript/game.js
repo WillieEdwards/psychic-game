@@ -7,7 +7,7 @@ var losses = 0;
 var guessesLeft = 9;
 var pastGuesses = [];
 
-alert ("Look deep within the minds eye, and you will find the answer in which you seek...")
+alert ("Don't try to comprehend with your mind. Your mind's very limited. Use your intuition.")
 
 document.onkeyup = function(event) {
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
@@ -36,7 +36,7 @@ document.onkeyup = function(event) {
             guessesLeft = 9;
             losses ++;
             pastGuesses = [];
-            alert ("Don't try to comprehend with your mind. Your mind's very limited. Use your intuition.")
+            alert ("Clear your mind... Intuition will tell the thinking mind where to look next.")
         }
 
         var html = 
