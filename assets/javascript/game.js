@@ -7,15 +7,15 @@ var losses = 0;
 var guessesLeft = 9;
 var pastGuesses = [];
 
-alert ("Don't try to comprehend with your mind. Your mind's very limited. Use your intuition.")
+alert ("If you think you're psychic, maybe you are.")
 
 document.onkeyup = function(event) {
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
     var userGuess = event.key;
     
-    var options = ["a", "b", "c", "d", "e", "f", "g",
-    "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
+    var options = ["a", "b", "c", "d", "e", "f", "g", "h", 
+    "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
     "t", "u", "v", "w", "x", "y", "z"];
 
     if (options.indexOf(userGuess) > -1) {
@@ -24,7 +24,7 @@ document.onkeyup = function(event) {
             wins ++;
             guessesLeft = 9;
             pastGuesses = [];
-            alert ("You've chosen correctly...")
+            alert ("You've been selected for Military Intelligence.")
         }
 
         if (userGuess != computerGuess) {
@@ -36,7 +36,7 @@ document.onkeyup = function(event) {
             guessesLeft = 9;
             losses ++;
             pastGuesses = [];
-            alert ("Clear your mind... Intuition will tell the thinking mind where to look next.")
+            alert ("Join the Mobile Infantry and save the galaxy.")
         }
 
         var html = 
