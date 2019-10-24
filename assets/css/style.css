@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
 body {
   /* background-image: url("../images/background.jpg"); */
   background-color: #050505;
@@ -19,41 +22,72 @@ body {
   h1,
   h3,
   p {
-    margin-bottom: 1.25rem;
+    margin-bottom: .7rem;
     color: #aaabbb;
     font-weight: 650;
   }
 
   h1 {
+    font-family: 'Advent Pro', sans-serif;
     padding-bottom: 1rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 3.1rem;
     border-bottom: .2rem solid #555555;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.8rem;
+    padding-top: .3rem;
+  }
+
+  #psychicGame {
+    background-image: url("../images/playBG.jpg");
+    opacity: 0.5;
+    border: solid #aaabbb .1rem;
+    border-radius: 1%;
   }
   
+  #psychicGame p, h3 {
+    font-family: 'VT323', monospace;
+    color: #32cd32;
+  }
+
+  #psychicGame p {
+    font-size: 1.2rem;
+  }
+
   /* navbar */
   
   nav {
+    font-family: 'Advent Pro', sans-serif;
     background-color: #bebebe;
-    border-bottom: .2rem solid #272727;
+    border-bottom: .2rem solid #acacac;
     margin-bottom: 3rem;
+  }
+
+  a {
+    font-weight: 650;
+    color: #050505;
+  }
+
+  a:hover {
+    color: #bebebe!important;
+    background-color: #050505;
   }
   
   /* footer */
   
   footer {
+    font-family: 'Advent Pro', sans-serif;
     position: absolute;
     width: 100%;
     bottom: 0;
-    padding: 2rem 0;
+    padding: 1.9rem 0;
     clear: both;
-    font-size: .75rem;
-    color: #808080;
+    font-size: 1rem;
+    color: #707070;
+    background-color: #bebebe;
     text-align: center;
-    border-top: .2rem solid #adadad;
+    border-top: .2rem solid #dddddd;
     height: 3rem;
   }
